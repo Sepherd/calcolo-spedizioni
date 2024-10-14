@@ -23,13 +23,13 @@ const percentualeAssicurazione = 0.01;
 			/***** FUNZIONI *****/
 
 function calcolaPeso() {
-	const volume = lunghezza.value * altezza.value * larghezza.value / 5000;
+	const volume = (lunghezza.value * altezza.value * larghezza.value) / 5000;
 	let i = 0;
 	while (volume > pesi[i])
 		i++;
 	let p = 0;
 	if (i > 0)
-		p = pesi[i] - volume <= 1 ? i + 1 : i;
+		p = pesi[i] - volume <= 0.5 ? i + 1 : i;
 	else
 		p = i;
 	peso.value = pesi[p].toString();
