@@ -41,9 +41,9 @@ function calcolaOpzioni() {
 	let c = 0;
 	if (zonaRemota.checked)
 		c += costoZonaRemota;
-	const valoreAssicurato = assicurazione.value * percentualeAssicurazione;
-	if (valoreAssicurato > prezzoMinimoAssicurazione)
-		c += valoreAssicurato;
+	const prezzoAssicurazione = assicurazione.value * percentualeAssicurazione;
+	if (prezzoAssicurazione > prezzoMinimoAssicurazione)
+		c += prezzoAssicurazione;
 	else if (assicurazione.value > 0)
 		c += prezzoMinimoAssicurazione;
 	return c;
