@@ -29,7 +29,7 @@ function calcolaPeso() {
 		i++;
 	let p = 0;
 	if (i > 0)
-		p = pesi[i] - volume <= 0.5 ? i + 1 : i;
+		p = pesi[i] - volume <= 0.1 ? i + 1 : i;
 	else
 		p = i;
 	peso.value = pesi[p].toString();
